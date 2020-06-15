@@ -19,7 +19,7 @@ body {
     background-color: #fff;
     width: 600px;
     min-height: 600px;
-
+    position: relative;
 }
 
 h2 {
@@ -51,5 +51,29 @@ h2 {
 }
 
 .modal {
-    display: none;
+    /*display: none;*/
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
+    width: 500px;
+    background-color: coral;
+    padding: 20px;
+
+}
+
+.modal img {
+    width: 300px;
+    height: 200px;
+}
+
+.comment {
+    width: 200px;
+    display: block;
+    vertical-align: top;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
 }
