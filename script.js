@@ -1,6 +1,8 @@
 const images = document.getElementById('images');
 const modal = document.getElementById('modal');
-const closeBtn = document.getElementById('close-btn')
+const closeBtn = document.getElementById('close-btn');
+const imgModal = document.getElementById('imgModal');
+const comments = document.getElementById('comments')
 
 
 function getID(e) {
@@ -13,6 +15,16 @@ function getID(e) {
 
 function showModal(imgID) {
     modal.classList.add('show')
+    fetch(`https://boiling-refuge-66454.herokuapp.com/images/${imgID}`)
+        .then(res => res.json())
+        .then(item => {
+            imgModal.src = `${item.url}`
+
+            comments.innerHTML = `
+            <div>18.11.2020</div>
+            <p>${item.comments[0].text}</p>
+            `
+        })
 }
 
 function closeModal(e) {
