@@ -51,8 +51,8 @@ h2 {
 }
 
 .modal {
-    /*display: none;*/
-    display: flex;
+    display: none;
+    /*display: flex;*/
     justify-content: center;
     position: absolute;
     top: 25%;
@@ -63,17 +63,49 @@ h2 {
 }
 
 .modal img {
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 175px;
 }
 
 .comment {
     width: 200px;
     display: block;
     vertical-align: top;
+    padding: 0 0 0 15px;
+}
+
+.comment p,
+.comment div {
+    margin: 0;
+    padding: 5px 0 0 0;
+}
+
+.comment div {
+    color: #bebebe;
 }
 
 .form {
     display: flex;
     flex-direction: column;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #bebebe;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #156892;
+    border: 1px solid #156892;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 0;
 }
