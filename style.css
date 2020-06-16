@@ -23,18 +23,16 @@ body {
 }
 
 h2 {
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0 0 20px;
 }
 
 .images {
     flex-grow: 1;
-
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-
 }
 
 .images .img {
@@ -52,7 +50,6 @@ h2 {
 
 .modal {
     display: none;
-    /*display: flex;*/
     justify-content: center;
     position: absolute;
     top: 25%;
@@ -60,6 +57,10 @@ h2 {
     background-color: coral;
     padding: 20px;
 
+}
+
+.show {
+    display: flex;
 }
 
 .modal img {
@@ -108,4 +109,10 @@ input[type="submit"] {
     right: 10px;
     top: 10px;
     border: 0;
+}
+
+@media (max-width: 320px) {
+    .images {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
