@@ -16,10 +16,7 @@ function showModal(imgID) {
 }
 
 function closeModal(e) {
-    console.log(e)
     modal.classList.remove('show')
-
-    addImages();
 }
 
 function addImages() {
